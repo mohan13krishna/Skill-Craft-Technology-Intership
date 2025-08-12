@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Awesome Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="light-theme">
+  <main class="app">
+    <header class="app-header">
+      <h1>Calculator</h1>
+      <button id="themeToggle" class="theme-btn" aria-pressed="false">🌙 Dark</button>
+    </header>
+
+    <section class="calculator-wrap">
+      <div class="calculator">
+        <div class="display-wrap">
+          <input id="display" type="text" inputmode="none" aria-label="Calculator display" disabled value="">
+        </div>
+
+        <div class="pad">
+          <button class="btn num" data-value="7">7</button>
+          <button class="btn num" data-value="8">8</button>
+          <button class="btn num" data-value="9">9</button>
+          <button class="btn op" data-value="/">÷</button>
+
+          <button class="btn num" data-value="4">4</button>
+          <button class="btn num" data-value="5">5</button>
+          <button class="btn num" data-value="6">6</button>
+          <button class="btn op" data-value="*">×</button>
+
+          
+          <button class="btn num" data-value="1">1</button>
+          <button class="btn num" data-value="2">2</button>
+          <button class="btn num" data-value="3">3</button>
+          <button class="btn op" data-value="-">−</button>
+
+          <button class="btn num" data-value="0">0</button>
+          <button class="btn dot" data-value=".">.</button>
+          <button id="clear" class="btn control">C</button>
+          <button class="btn op" data-value="+">+</button>
+
+          <button id="backspace" class="btn control">⌫</button>
+          <button id="equals" class="btn equals">=</button>
+          <button id="historyToggle" class="btn small">History</button>
+          <button id="recall" class="btn small">↺</button>
+        </div>
+      </div>
+
+      <aside id="historyPanel" class="history-panel" aria-hidden="true">
+        <div class="history-header">
+          <h2>History</h2>
+          <div class="history-actions">
+            <button id="clearHistory" class="small">Clear</button>
+            <button id="exportHistory" class="small">Export</button>
+          </div>
+        </div>
+        <ul id="historyList" class="history-list" aria-live="polite"></ul>
+      </aside>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
